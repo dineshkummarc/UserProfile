@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<title>FiTMAPPED - User Ctrl Create Workout</title>
+
+<link href="css/user-ctrl.css" rel="stylesheet" >
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet'>
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src='js/modernizr.js'></script>
+</head>
+<body>
+
+<div class="container">
+
+	<header>
+		<div class="user-ctrl-head row">
+			<h2 class="user-name">Eleanor Roosevelt</h2>
+			<nav>
+				<ul class="user-ctrl-nav">
+					<li><a href="user-profile.html" title="My Home"><i class="icon icon-home"></i></a></li>
+					<li><a href="#" title="My Settings"><i class="icon icon-cog"></i></a></li>
+					<li><a href="user-profile.html#badges" title="My Badges"><i class="icon icon-certificate"></i></a></li>
+					<li><a href="user-profile.html#cal" class="active" title="My Calendar"><i class="icon icon-calendar"></i></a></li>
+					<li><a href="user-ctrl-places.html#places" title="My Places"><i class="icon icon-star"></i></a></li>
+					<li><a href="user-ctrl-friends.html" title="My Friends"><i class="icon icon-group"></i></a></li>
+					<li><a href="user-profile.html#reviews" title="My Reviews"><i class="icon icon-pencil"></i></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="user-ctrl-content">
+
+		<aside>
+			<div class="left-panel">
+
+				<div class="invite-friends mod">
+					<h4>Invite Friends</h4>
+					<input type="text" placeholder="Find friends" />
+				</div>
+
+				<div class="friends mod">
+					<h4>Friends</h4>
+					<div class="friend-mod mod-single">
+						<div class="friend-mod--image"><img src="img/profile-image.jpg"></div>
+						<div class="friend-mod--details">
+							<span class="first">Eleanor</span>
+							<span class="last">Roosevelt</span>
+						</div>
+					</div>
+					<div class="friend-mod mod-single">
+						<div class="friend-mod--image"><img src="img/profile-image.jpg"></div>
+						<div class="friend-mod--details">
+							<span class="first">Eleanor</span>
+							<span class="last">Roosevelt</span>
+						</div>
+					</div>
+					<div class="friend-mod mod-single">
+						<div class="friend-mod--image"><img src="img/profile-image.jpg"></div>
+						<div class="friend-mod--details">
+							<span class="first">Eleanor</span>
+							<span class="last">Roosevelt</span>
+						</div>
+					</div>
+					<a href="#" class="mod-footlink">View All Friends &raquo;</a>
+				</div>
+
+			</div>
+		</aside>
+
+		<section class="user-workout">
+			<div class="content user-ctrl-workout">
+
+				<h4>Create Workout</h4>
+				<form name="create_workout">
+					<div class="form-row">
+						<label>Workout Title</label>
+						<div class="col-4-4">
+							<input type="text" placeholder="Enter a title for your workout"/>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="inline date">
+							<label>Date</label>
+							<div>
+								<input type="text" class="selectDate" />
+							</div>
+						</div>
+						<div class="inline time">
+							<label class="sm">Time</label>
+							<div>
+								<select>
+									<option value="0">12:00 am</option>
+									<option value="1">1:00 am</option>
+									<option value="2">2:00 am</option>
+									<option value="3">3:00 am</option>
+									<option value="4">4:00 am</option>
+									<option value="5">5:00 am</option>
+									<option value="6">6:00 am</option>
+									<option value="7">7:00 am</option>
+									<option value="8">8:00 am</option>
+									<option value="9">9:00 am</option>
+									<option value="10">10:00 am</option>
+									<option value="11">11:00 am</option>
+									<option value="12">12:00 pm</option>
+									<option value="13">1:00 pm</option>
+									<option value="14">2:00 pm</option>
+									<option value="15">3:00 pm</option>
+									<option value="16">4:00 pm</option>
+									<option value="17">5:00 pm</option>
+									<option value="18">6:00 pm</option>
+									<option value="19">7:00 pm</option>
+									<option value="20">8:00 pm</option>
+									<option value="21">9:00 pm</option>
+									<option value="22">10:00 pm</option>
+									<option value="23">11:00 pm</option>
+								</select>
+							</div>
+						</div>
+						<div class="inline repeat">
+							<label>Repeat</label>
+							<div>
+								<select>
+									<option>Never</option>
+									<option>Every Week</option>
+									<option>Every Day</option>
+									<option>Every Month</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<label>Location</label>
+						<div class="col-4-4">
+							<input type="text" placeholder="Where are you working out?"/>
+						</div>
+					</div>
+					<div class="form-row">
+						<label class="top">Description</label>
+						<div class="col-4-4">
+							<textarea></textarea>
+						</div>
+					</div>
+					<div class="form-row">
+						<label>Activities</label>
+						<div class="activities col-4-4">
+							<div class="inline">
+								<input type="checkbox" id="yoga" name="activities" value="yoga"/>
+								<label for="yoga">Yoga</label>
+							</div>
+							<div class="inline">
+								<input type="checkbox" id="spin" name="activities" value="spin"/>
+								<label for="spin">Spin</label>
+							</div>
+							<div class="inline">
+								<input type="checkbox" id="martial_arts" name="activities" value="martial_arts"/>
+								<label for="martial_arts">Martial Arts</label>
+							</div>
+							<div class="inline">
+								<input type="checkbox" id="dance" name="activities" value="dance"/>
+								<label for="dance">Dance</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<label class="top">Inviting</label>
+						<div class="friends-invited col-4-4">
+							<div class="friend-mod mod-single">
+								<div class="friend-mod--image"><img src="img/profile-image.jpg"></div>
+								<div class="friend-mod--details">
+									<span class="first">Eleanor</span>
+									<span class="last">Roosevelt</span>
+								</div>
+							</div>
+							<div class="friend-mod mod-single">
+								<div class="friend-mod--image"><img src="img/profile-image.jpg"></div>
+								<div class="friend-mod--details">
+									<span class="first">Eleanor</span>
+									<span class="last">Roosevelt</span>
+								</div>
+							</div>
+							<div class="friend-mod mod-single">
+								<div class="friend-mod--image"><img src="img/profile-image.jpg"></div>
+								<div class="friend-mod--details">
+									<span class="first">Eleanor</span>
+									<span class="last">Roosevelt</span>
+								</div>
+							</div>
+							<div class="friend-mod mod-single">
+								<div class="friend-mod--image"><img src="img/profile-image.jpg"></div>
+								<div class="friend-mod--details">
+									<span class="first">Eleanor</span>
+									<span class="last">Roosevelt</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-row form-buttons">
+						<a class="btn btn-save">Save Changes</a>
+					</div>
+				</form>
+
+			</div>
+		</section>
+
+	</div>
+
+</div>
+
+<script src='js/user-ctrl.js'></script>
+<script src='js/base.js'></script>
+
+
+</body>
+</html>

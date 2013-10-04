@@ -1,0 +1,723 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../font/fontawesome-webfont.eot?v=3.2.1");
+  src: url("../font/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"), url("../font/fontawesome-webfont.woff?v=3.2.1") format("woff"), url("../font/fontawesome-webfont.ttf?v=3.2.1") format("truetype"), url("../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  color: #777777;
+  font-family: "Oxygen", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  margin: 50px 0;
+}
+
+.clearfix, .user-ctrl-head, .left-panel .mod, .mod-single, .user-stream-single {
+  zoom: 1;
+}
+.clearfix:before, .user-ctrl-head:before, .left-panel .mod:before, .mod-single:before, .user-stream-single:before, .clearfix:after, .user-ctrl-head:after, .left-panel .mod:after, .mod-single:after, .user-stream-single:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after, .user-ctrl-head:after, .left-panel .mod:after, .mod-single:after, .user-stream-single:after {
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #1bb9b5;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 60px;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 45px;
+  font-size: 1.875rem;
+  line-height: 2.8125rem;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 36px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 27px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+}
+
+h6 {
+  font-size: 12px;
+  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.btn {
+  display: inline-block;
+  height: 40px;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 40px;
+  text-transform: uppercase;
+  background-color: #0069a0;
+  color: white;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+}
+.btn:hover, .btn.active {
+  background-color: #1bb9b5;
+}
+
+.container {
+  width: 1000px;
+  margin: 20px auto;
+}
+
+.row {
+  padding: 20px 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+form > div {
+  display: inline-block;
+}
+form > div.form-row {
+  display: block;
+  margin-bottom: 20px;
+  overflow: visible;
+}
+
+label {
+  display: inline-block;
+  width: 125px;
+  text-align: right;
+  vertical-align: middle;
+  padding-right: 20px;
+}
+
+input[type="text"],
+input[type="phone"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="checkbox"],
+select {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #dddddd;
+  outline: none;
+  padding: 10px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+input[type="text"]:focus,
+input[type="phone"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  border: 1px solid #1bb9b5;
+}
+
+textarea {
+  width: 100%;
+  height: 160px;
+  border: 1px solid #dddddd;
+  resize: none;
+  outline: none;
+  padding: 10px;
+}
+textarea:focus {
+  border: 1px solid #1bb9b5;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: 1px solid #dddddd;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  background-image: url("../img/down.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 26px;
+}
+
+.top {
+  vertical-align: top;
+  padding-top: 5px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.col-4-4 {
+  display: inline-block;
+  width: 590px;
+}
+
+.date > div {
+  display: inline-block;
+  width: 140px;
+}
+
+.time > div {
+  display: inline-block;
+  width: 110px;
+}
+.time > label {
+  width: 70px;
+}
+
+.repeat > div {
+  display: inline-block;
+  width: 168px;
+}
+.repeat > label {
+  width: 90px;
+}
+
+.activities input[type="checkbox"] {
+  display: none;
+}
+.activities input[type="checkbox"]:checked + label {
+  background-color: #efefef;
+}
+.activities label {
+  border: 1px solid #dddddd;
+  height: 40px;
+  width: auto;
+  padding: 0 20px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.activities label:hover {
+  background-color: #efefef;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-buttons {
+  float: right;
+}
+.form-buttons a {
+  font-weight: 700;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+}
+.form-buttons a:hover {
+  background-color: #1bb9b5;
+}
+
+.ui-datepicker {
+  margin-top: 2px;
+  text-align: center;
+  position: relative;
+}
+
+.ui-datepicker-header {
+  height: 40px;
+  line-height: 40px;
+  background-color: #444;
+  color: #fff;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  position: absolute;
+}
+
+.ui-datepicker-prev {
+  left: 10px;
+}
+
+.ui-datepicker-next {
+  right: 10px;
+}
+
+.ui-datepicker-calendar {
+  border: 1px solid #dddddd;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.ui-datepicker-calendar tr td,
+.ui-datepicker-calendar tr th {
+  background-color: whitesmoke;
+  margin-top: 2px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin: 2px;
+  color: #444;
+}
+.ui-datepicker-calendar tr td a,
+.ui-datepicker-calendar tr th a {
+  color: #444;
+}
+
+.ui-datepicker-calendar tr td:hover {
+  background-color: #1bb9b5;
+}
+.ui-datepicker-calendar tr td:hover a {
+  color: #fff;
+}
+
+.ui-datepicker-calendar tr th {
+  background-color: #ddd;
+}
+
+.ui-datepicker-calendar tr td {
+  cursor: pointer;
+}
+
+.ui-datepicker-current-day {
+  background-color: #0069a0;
+}
+
+.user-ctrl-head {
+  padding-bottom: 10px;
+}
+
+.user-name {
+  float: left;
+  line-height: 50px;
+  color: #0069a0;
+}
+
+.user-ctrl-nav {
+  float: right;
+}
+
+.user-ctrl-nav li {
+  display: inline-block;
+  float: left;
+  margin: 0 3px;
+}
+.user-ctrl-nav li:first-child {
+  margin-left: 0;
+}
+.user-ctrl-nav li:last-child {
+  margin-right: 0;
+}
+
+.user-ctrl-nav li a {
+  display: block;
+  height: 50px;
+  width: 50px;
+  font-size: 24px;
+  line-height: 50px;
+  font-size: 1.5rem;
+  line-height: 3.125rem;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #dddddd;
+  color: #0069a0;
+}
+.user-ctrl-nav li a.active, .user-ctrl-nav li a:hover {
+  background-color: whitesmoke;
+  color: #1bb9b5;
+}
+
+.left-panel {
+  float: left;
+  width: 260px;
+}
+
+.left-panel .mod {
+  padding: 20px;
+  padding-left: 0;
+  border-bottom: 1px solid #dddddd;
+}
+.left-panel .mod:last-child {
+  border-bottom: none;
+}
+
+.mod-single {
+  position: relative;
+}
+
+.mod-footlink {
+  float: right;
+  font-size: 12px;
+  margin: 10px 0 0 0;
+  color: #777777;
+  text-decoration: underline;
+}
+
+.mod-single span {
+  display: block;
+}
+
+.paging {
+  float: right;
+}
+
+.paging a {
+  font-weight: 700;
+}
+.paging a:hover {
+  background-color: #1bb9b5;
+}
+.paging a.inactive {
+  background-color: #ddd;
+}
+
+.user-ctrl-friends.content {
+  padding-right: 0;
+}
+
+.my-friends {
+  margin: 20px 0;
+}
+.my-friends .friend-mod {
+  display: inline-block;
+  float: left;
+  width: 32%;
+  margin: 0 2% 10px 0;
+}
+.my-friends .friend-mod:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.user-ctrl-places.content {
+  border: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+.user-ctrl-places.content .places-col {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+}
+.user-ctrl-places.content .places-col:last-child {
+  margin-right: 0;
+}
+
+.place-single {
+  width: 100%;
+  float: left;
+  border: 1px solid #dddddd;
+  height: 82px;
+  margin-bottom: 10px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.place-single:hover {
+  background-color: whitesmoke;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.place-single img {
+  height: 80px;
+  width: 80px;
+  border: none;
+  float: left;
+  margin-right: 10px;
+}
+.place-single .place-name {
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #777777;
+  display: block;
+}
+.place-single p {
+  float: left;
+  font-size: 10px;
+  line-height: 15px;
+  font-size: 0.625rem;
+  line-height: 0.9375rem;
+  padding: 5px;
+  color: #777777;
+}
+
+.user-ctrl-workout.content {
+  padding-right: 0;
+}
+
+.event-mod .edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #777777;
+}
+.event-mod .edit:hover {
+  color: #1bb9b5;
+}
+
+.event-mod--date {
+  display: inline-block;
+  float: left;
+  height: 60px;
+  width: 60px;
+  text-align: right;
+  color: white;
+  background-color: #444;
+  padding: 5px;
+  margin-right: 13.33333px;
+}
+
+.event-mod--date .day {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.event-mod--date .weekday {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.event-mod--details {
+  width: 150px;
+  display: inline-block;
+  float: left;
+}
+
+.event-mod--details .time {
+  font-size: 18px;
+  line-height: 24px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+
+.event-mod--details .title {
+  font-size: 12px;
+  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+}
+
+.friend-mod {
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid #dddddd;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.friend-mod:last-child {
+  margin-bottom: 0;
+}
+.friend-mod:hover {
+  background-color: whitesmoke;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.friend-mod--image {
+  display: inline-block;
+  float: left;
+  height: 60px;
+  width: 60px;
+  margin-right: 13.33333px;
+  overflow: hidden;
+}
+
+.friend-mod--image img {
+  width: 100%;
+}
+
+.friend-mod--details {
+  font-size: 18px;
+  line-height: 24px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  padding: 5px 0;
+}
+
+.friend-mod--details .first {
+  font-weight: 300;
+}
+
+.friend-mod--details .last {
+  font-weight: 700;
+}
+
+.friends-invited .friend-mod {
+  display: inline-block;
+  width: 220px;
+  margin-right: 8px;
+}
+
+.user-ctrl-content {
+  margin-bottom: 20px;
+}
+
+.content {
+  float: left;
+  width: 740px;
+  min-height: 500px;
+  padding: 20px;
+  padding-right: 0;
+  margin-bottom: 20px;
+  border-left: 1px solid #dddddd;
+}
+
+.user-stream-single {
+  padding: 5px 0;
+}
+.user-stream-single:first-child {
+  padding-top: 0;
+}
+.user-stream-single:last-child {
+  border-bottom: none;
+}
+
+.user-stream--type {
+  display: inline-block;
+  float: left;
+  font-size: 24px;
+  margin: 6px;
+}
+
+.user-stream--msg {
+  display: inline;
+  float: left;
+  margin: 10px;
+}
+
+.user-stream--msg a {
+  color: #0069a0;
+}
+.user-stream--msg a:hover {
+  text-decoration: underline;
+}

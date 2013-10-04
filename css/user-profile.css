@@ -1,0 +1,558 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../font/fontawesome-webfont.eot?v=3.2.1");
+  src: url("../font/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"), url("../font/fontawesome-webfont.woff?v=3.2.1") format("woff"), url("../font/fontawesome-webfont.ttf?v=3.2.1") format("truetype"), url("../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  color: #777777;
+  font-family: "Oxygen", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  margin: 50px 0;
+}
+
+.clearfix, .user-heading, .user-calendar, .badges, .places, .places--where, .places--favs, .places--wants, .friends {
+  zoom: 1;
+}
+.clearfix:before, .user-heading:before, .user-calendar:before, .badges:before, .places:before, .places--where:before, .places--favs:before, .places--wants:before, .friends:before, .clearfix:after, .user-heading:after, .user-calendar:after, .badges:after, .places:after, .places--where:after, .places--favs:after, .places--wants:after, .friends:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after, .user-heading:after, .user-calendar:after, .badges:after, .places:after, .places--where:after, .places--favs:after, .places--wants:after, .friends:after {
+  clear: both;
+}
+
+.float-left, .calendar-wrap, .activities-wrap {
+  float: left;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #1bb9b5;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 60px;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 45px;
+  font-size: 1.875rem;
+  line-height: 2.8125rem;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 36px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 27px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+}
+
+h6 {
+  font-size: 12px;
+  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.btn {
+  display: inline-block;
+  height: 40px;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 40px;
+  text-transform: uppercase;
+  background-color: #0069a0;
+  color: white;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+}
+.btn:hover, .btn.active {
+  background-color: #1bb9b5;
+}
+
+.container {
+  width: 1000px;
+  margin: 20px auto;
+}
+
+.row {
+  padding: 20px 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+.left-panel {
+  width: 200px;
+  float: left;
+  margin-right: 20px;
+}
+
+.left-panel-user.sticky {
+  position: fixed;
+  top: 20px;
+}
+
+.user-img {
+  position: relative;
+  height: 240px;
+  background-color: whitesmoke;
+  margin-bottom: 1px;
+}
+
+.user-score {
+  height: 80px;
+  background-color: #1bb9b5;
+  color: white;
+  text-align: center;
+  line-height: 2.125em;
+}
+
+.user-score--value {
+  padding-top: 14px;
+  font-size: 3em;
+}
+
+.user-score--title {
+  font-size: 1.125em;
+}
+
+.add-friend-btn {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #1bb9b5;
+  background: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.add-friend-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.user-nav {
+  border-bottom: 1px solid #dddddd;
+}
+.user-nav li a {
+  display: block;
+  color: #0069a0;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 0 12px 15px;
+  background-color: whitesmoke;
+  border-top: 1px solid #dddddd;
+}
+.user-nav li a:hover {
+  background-color: white;
+  color: #777777;
+}
+
+.user-nav li a.selected {
+  background-color: white;
+  color: #777777;
+}
+
+i.user-nav-icon {
+  display: inline-block;
+  float: left;
+  width: 20px;
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.profile-content {
+  width: 780px;
+  float: left;
+}
+
+.user-heading {
+  padding-top: 0;
+}
+
+.user-name {
+  font-size: 2.250em;
+  font-weight: bold;
+  line-height: 1em;
+  color: #0069a0;
+  margin-bottom: 13.33333px;
+}
+
+.user-motto {
+  font-size: 2.250em;
+  font-weight: 100;
+  line-height: 1.125em;
+  letter-spacing: 0.05em;
+  color: #777777;
+}
+.user-motto:before, .user-motto:after {
+  display: inline-block;
+  position: relative;
+  top: 25px;
+  font-size: 2.5em;
+  font-weight: normal;
+  color: #777777;
+}
+.user-motto:before {
+  content: "\201C";
+  margin-right: 5px;
+}
+.user-motto:after {
+  content: "\201D";
+  margin-left: 5px;
+}
+
+.user-about p {
+  font-size: 14px;
+  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  color: #777777;
+}
+
+.calendar {
+  height: auto;
+  width: 500px;
+}
+
+.calendar-wrap {
+  width: 500px;
+  margin-right: 20px;
+}
+
+.activities-wrap {
+  width: 260px;
+}
+
+.activities--date {
+  color: #0069a0;
+}
+
+.activity-single {
+  margin-bottom: 10px;
+}
+
+.activity-single--time {
+  color: #777777;
+  margin-bottom: 5px;
+}
+
+.activity-single--summary {
+  font-size: 12px;
+  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.activity-link {
+  text-decoration: underline;
+}
+
+.badge {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.badge-image {
+  margin-bottom: 10px;
+  border: 5px solid #dddddd;
+  width: 125px;
+  height: 125px;
+  -webkit-border-radius: 50% 50%;
+  -moz-border-radius: 50% / 50%;
+  border-radius: 50% / 50%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.badge p {
+  font-size: 12px;
+  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.places--where, .places--favs, .places--wants {
+  margin-bottom: 20px;
+}
+
+.places-icon, .places-title {
+  color: #0069a0;
+}
+
+.places-icon {
+  font-size: 18px;
+  line-height: 27px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+}
+
+.places-title {
+  display: inline-block;
+}
+
+.place-single {
+  width: 100%;
+  float: left;
+  border: 1px solid #dddddd;
+  height: 82px;
+  margin-bottom: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.place-single:hover {
+  background-color: whitesmoke;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.place-single img {
+  height: 80px;
+  width: 80px;
+  border: none;
+  float: left;
+  margin-right: 10px;
+}
+.place-single .place-name {
+  font-size: 18px;
+  line-height: 27px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  font-weight: bold;
+  color: #777777;
+  display: block;
+}
+.place-single p {
+  float: left;
+  font-size: 10px;
+  line-height: 15px;
+  font-size: 0.625rem;
+  line-height: 0.9375rem;
+  padding: 10px;
+  color: #777777;
+}
+
+.place-actions {
+  float: right;
+}
+.place-actions li {
+  display: inline;
+  float: left;
+  padding: 10px;
+  padding-left: 0;
+}
+.place-actions li a {
+  display: block;
+  height: 60px;
+  width: 60px;
+  background-color: #1bb9b5;
+  text-decoration: none;
+  line-height: 60px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+.place-actions li a:hover {
+  background-color: #0069a0;
+}
+
+.friend-single {
+  float: left;
+  width: 24%;
+  margin-right: 1.33333%;
+  margin-bottom: 10px;
+}
+
+.friend-single:nth-child(4) {
+  margin-right: 0;
+}
+
+.friend-img {
+  position: relative;
+  margin-bottom: 1px;
+}
+
+.friend-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.friend-name {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  color: white;
+  background-color: #1bb9b5;
+  width: 100%;
+}
+
+.user-reviews {
+  border-bottom: 0;
+}
+
+.review-single {
+  margin-bottom: 30px;
+}
+
+.review-head {
+  margin-bottom: 10px;
+}
+
+.review-head--studio {
+  font-size: 20px;
+  line-height: 30px;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: #0069a0;
+  display: block;
+}
+
+.review-head--date {
+  font-size: 12px;
+  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.review-body {
+  font-size: 14px;
+  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+}
+
+.review-body--title {
+  display: block;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.review-body--copy {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}

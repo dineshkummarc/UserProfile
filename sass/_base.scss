@@ -1,0 +1,99 @@
+// Base
+// * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@import "compass/reset";
+@import "compass/css3";
+@import "variables";
+@import "fonts";
+@import "mixins";
+
+// Universal & Body
+// *********************************
+
+* {
+	@include box-sizing(border-box);
+}
+
+body {
+	color:$grey;
+	font: {
+		family: $Oxygen;
+		weight: 400;
+	}
+	@include font-size(0.875, 1.125);
+	margin:50px 0;
+}
+
+.clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.float-left {
+	float:left;
+}
+
+a {
+	text-decoration:none;
+	@include transition(all 0.3s ease-in-out);
+	&:hover {
+		@include transition(all 0.3s ease-in-out);
+	}
+}
+
+// Headings & Text
+// *********************************
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:bold;
+	color:$teal;
+	margin-bottom:$margin / 2;
+}
+
+h1 { @include font-size(2.5); }
+h2 { @include font-size(1.875); }
+h3 { @include font-size(1.5); }
+h4 { @include font-size(1.125); }
+h5 { @include font-size(0.875); }
+h6 { @include font-size(0.750); }
+
+// Buttons
+// *********************************
+
+.btn {
+	display:inline-block;
+	height:40px;
+	padding:0 20px;
+	text-align:center;
+	font-size:12px;
+	font-weight:500;
+	line-height:40px;
+	text-transform:uppercase;
+	background-color:$blue;
+	color:$white;
+	@include border-radius(4px, 4px);
+	&:hover, &.active {
+		background-color:$teal;
+	}
+}
+
+// Structure
+// *********************************
+
+.container {
+	width:1000px;
+	margin:$margin auto;
+}
+
+.row {
+	padding: $row-padding;
+	border-bottom:$border-size $stroke $dkgrey;
+}

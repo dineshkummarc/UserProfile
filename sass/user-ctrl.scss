@@ -1,0 +1,161 @@
+// Imports
+// *********************************
+
+@import "base";
+@import "forms";
+@import "user-ctrl-master";
+@import "user-ctrl-friends";
+@import "user-ctrl-places";
+@import "user-ctrl-workout";
+
+// Event Mod
+// *********************************
+
+.event-mod .edit {
+	position:absolute;
+	top:0;
+	right:0;
+	color:$grey;
+
+	&:hover {
+		color:$teal;
+	}
+}
+
+.event-mod--date {
+	display:inline-block;
+	float:left;
+	height:60px;
+	width:60px;
+	text-align:right;
+	color:$white;
+	background-color:#444;
+	padding:$padding / 4;
+	margin-right:$margin / 1.5;
+}
+
+.event-mod--date .day {
+	font-size:22px;
+	font-weight:700;
+}
+
+.event-mod--date .weekday {
+	font-size:12px;
+	text-transform: uppercase;
+}
+
+.event-mod--details {
+	width:150px;
+	display:inline-block;
+	float:left;
+}
+
+.event-mod--details .time {
+	@include font-size(1.125, 1.5);
+	font-weight:300;
+}
+
+.event-mod--details .title {
+	@include font-size(0.750);
+	font-weight:700;
+}
+
+// Friend Mod
+// *********************************
+
+.friend-mod {
+	margin-bottom:10px;
+	background-color:$white;
+	border:$border $dkgrey;
+	@include transition(all 0.3s ease-in-out);
+	cursor:pointer;
+
+	&:last-child {
+		margin-bottom:0;
+	}
+	&:hover {
+		background-color:$ltgrey;
+		@include transition(all 0.3s ease-in-out);
+	}
+}
+
+.friend-mod--image {
+	display:inline-block;
+	float:left;
+	height:60px;
+	width:60px;
+	margin-right:$margin / 1.5;
+	overflow:hidden;
+}
+
+.friend-mod--image img {
+	width:100%;
+}
+
+.friend-mod--details {
+	@include font-size(1.125, 1.5);
+	padding:5px 0;
+}
+
+.friend-mod--details .first {
+	font-weight:300;
+}
+
+.friend-mod--details .last {
+	font-weight:700;
+}
+
+.friends-invited .friend-mod {
+	display:inline-block;
+	width:220px;
+	margin-right:8px;
+}
+
+// Content
+// *********************************
+
+.user-ctrl-content {
+	margin-bottom:20px;
+}
+
+.content {
+	float:left;
+	width:740px;
+	min-height:500px;
+	padding:20px;
+	padding-right:0;
+	margin-bottom:20px;
+	border-left:$border $dkgrey;
+}
+
+.user-stream-single {
+	padding:5px 0;
+	//border-bottom:$border $dkgrey;
+	@extend .clearfix;
+	&:first-child {
+		padding-top:0;
+	}
+	&:last-child {
+		border-bottom:none;
+	}
+}
+
+.user-stream--type {
+	display:inline-block;
+	float:left;
+	font-size:24px;
+	margin:6px;
+}
+
+.user-stream--msg {
+	display:inline;
+	float:left;
+	margin:10px;
+}
+
+.user-stream--msg a {
+	color:$blue;
+	&:hover{
+	text-decoration:underline;
+	}
+}

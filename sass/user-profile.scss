@@ -1,0 +1,403 @@
+// Import Base
+// *********************************
+
+@import "base";
+
+// Left Panel
+// *********************************
+
+.left-panel {
+	width:200px;
+	float:left;
+	margin-right:$margin;
+}
+
+.left-panel-user.sticky {
+	position:fixed;
+	top:20px;
+}
+
+.user-avatar {
+}
+
+.user-img {
+	position:relative;
+	height:240px;
+	background-color:$ltgrey;
+	margin-bottom:1px;
+}
+
+.user-score {
+	height:80px;
+	background-color:$teal;
+	color:$white;
+	text-align:center;
+	line-height:2.125em;
+}
+
+.user-score--value {
+	padding-top:14px;
+	font: {
+		size:3em;
+	}
+}
+
+.user-score--title {
+	font: {
+		size:1.125em;
+	}
+}
+
+.add-friend-btn {
+	display:block;
+	position:absolute;
+	top:5px;
+	left:5px;
+	height:30px;
+	width:30px;
+	font-size:20px;
+	line-height:28px;
+	text-align:center;
+	color:$teal;
+	background:$white;
+	background-color:rgba(255,255,255,0.6);
+	cursor:pointer;
+
+	&:hover {
+		background-color:rgba(255,255,255,0.9);
+	}
+}
+
+.user-nav {
+	border: {
+		bottom: 1px solid $dkgrey;
+	}
+	li {
+		a {
+			display:block;
+			color:$blue;
+			text-decoration:none;
+			font-weight:bold;
+			padding:12px 0 12px 15px;
+			background-color:$ltgrey;
+			border: {
+				top: 1px solid $dkgrey;
+			}
+
+			&:hover {
+				background-color:$white;
+				color:$grey;
+			}
+		}
+	}
+}
+
+.user-nav li a.selected {
+	background-color:$white;
+	color:$grey;
+}
+
+i.user-nav-icon {
+	display:inline-block;
+	float:left;
+	width:20px;
+	margin-right:10px;
+	font-size:18px;
+	line-height:18px;
+}
+
+// Profile Content
+// *********************************
+
+.profile-content {
+	width:780px;
+	float:left;
+}
+
+.user-heading {
+	padding-top:0;
+	@extend .clearfix;
+}
+
+.user-name {
+	font: {
+		size: 2.250em;
+		weight: bold;
+	}
+	line-height:1em;
+	color:$blue;
+	margin-bottom:$margin / 1.5;
+}
+
+.user-motto {
+	font: {
+		size: 2.250em;
+		weight: 100;
+	}
+	line-height:1.125em;
+	letter-spacing:0.05em;
+	color:$grey;
+
+	&:before, &:after {
+		display:inline-block;
+		position:relative;
+		top:25px;
+		font: {
+			size:2.5em;
+			weight:normal;
+		}
+		color:$grey;
+	}
+
+	&:before {
+		content: "\201C";
+		margin-right:5px;
+	}
+
+	&:after {
+		content: "\201D";
+		margin-left:5px;
+	}
+}
+
+.user-about p {
+	@include font-size(0.875);
+	color:$grey;
+}
+
+// Calendar
+// *********************************
+
+.user-calendar {
+	@extend .clearfix;
+}
+
+.calendar {
+	height:auto;
+	width:500px;
+}
+
+.calendar-wrap, .activities-wrap {
+	@extend .float-left;
+}
+
+.calendar-wrap {
+	width:500px;
+	margin-right:$margin;
+}
+
+.activities-wrap {
+	width:260px;
+}
+
+.activities--date {
+	color:$blue;
+}
+
+.activity-single {
+	margin-bottom:$margin / 2;
+}
+
+.activity-single--time {
+	color:$grey;
+	margin-bottom:$margin / 4;
+}
+
+.activity-single--summary {
+	@include font-size(0.750);
+}
+
+.activity-link {
+	text-decoration:underline;
+}
+
+// Badges
+// *********************************
+
+.badges {
+	@extend .clearfix;
+}
+
+.badge {
+	float:left;
+	width:20%;
+	text-align:center;
+}
+
+.badge-image {
+	margin-bottom:$margin / 2;
+	border:5px $stroke $dkgrey;
+	width:125px;
+	height:125px;
+	@include border-radius(50%, 50%);
+	background-color:$white;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.badge p {
+	@include font-size(0.750);
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+// Places
+// *********************************
+
+.places {
+	@extend .clearfix;
+}
+
+.places--where, .places--favs, .places--wants {
+	@extend .clearfix;
+	margin-bottom:20px;
+}
+
+.places-icon, .places-title {
+	color:$blue;
+}
+
+.places-icon {
+	@include font-size(1.125);
+}
+
+.places-title {
+	display:inline-block;
+}
+
+.place-single {
+	width:100%;
+	float:left;
+	border:1px $stroke $dkgrey;
+	height:82px;
+	margin-bottom:$margin / 2;
+	@include transition(all 0.3s ease-in-out);
+
+	&:hover {
+		background-color:$ltgrey;
+		@include transition(all 0.3s ease-in-out);
+	}
+	img {
+		height:80px;
+		width:80px;
+		border:none;
+		float:left;
+		margin-right:10px;
+	}
+
+	.place-name {
+		@include font-size(1.125);
+		font-weight:bold;
+		color:$grey;
+		display:block;
+	}
+
+	p {
+		float:left;
+		@include font-size(0.625);
+		padding:10px;
+		color:$grey;
+	}
+}
+
+.place-actions {
+	float:right;
+	li {
+		display:inline;
+		float:left;
+		padding:10px;
+		padding-left:0;
+		a {
+			display:block;
+			height:60px;
+			width:60px;
+			background-color:$teal;
+			text-decoration: none;
+			line-height:60px;
+			text-align:center;
+			font-size:24px;
+			color:$white;
+			&:hover {
+				background-color:$blue;
+			}
+		}
+	}
+}
+
+// Friends
+// *********************************
+
+.friends {
+	@extend .clearfix;
+}
+
+.friend-single {
+	float:left;
+	width:24%;
+	margin-right:1.33333%;
+	margin-bottom:10px;
+}
+
+.friend-single:nth-child(4) {
+	margin-right:0;
+}
+
+.friend-img {
+	position:relative;
+	margin-bottom:1px;
+}
+
+.friend-img img {
+	width:100%;
+	height:auto;
+	display:block;
+}
+
+.friend-name {
+	padding:10px;
+	@include font-size(0.875);
+	color:$white;
+	background-color:$teal;
+	width:100%;
+}
+
+// Reviews
+// *********************************
+
+.user-reviews {
+	border-bottom:0;
+}
+
+.review-single {
+	margin-bottom:$margin * 1.5;
+}
+
+.review-head {
+	margin-bottom:$margin / 2;
+}
+
+.review-head--studio {
+	@include font-size(1.250);
+	color:$blue;
+	display:block;
+}
+
+.review-head--date {
+	@include font-size(0.750);
+}
+
+.review-body {
+	@include font-size(0.875);
+}
+
+.review-body--title {
+	display:block;
+	margin:10px 0;
+	font-weight:700;
+}
+
+.review-body--copy {
+	display:block;
+	margin-bottom:$margin / 2;
+	@include font-size(0.750);
+}

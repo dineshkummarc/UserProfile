@@ -1,0 +1,102 @@
+// Control Panel Header
+// *********************************
+
+.user-ctrl-head {
+	@extend .clearfix;
+	padding-bottom:10px;
+}
+
+.user-name {
+	float:left;
+	line-height:50px;
+	color:$blue;
+}
+
+.user-ctrl-nav {
+	float:right;
+}
+
+.user-ctrl-nav li {
+	display:inline-block;
+	float:left;
+	margin:0 3px;
+
+	&:first-child {
+		margin-left:0;
+	}
+	&:last-child {
+		margin-right:0;
+	}
+}
+
+.user-ctrl-nav li a {
+	display:block;
+	height:50px;
+	width:50px;
+	@include font-size(1.5,3.125);
+	text-align:center;
+	background-color:$white;
+	border:$border $dkgrey;
+	color:$blue;
+
+	&.active, &:hover {
+		background-color:$ltgrey;
+		color:$teal;
+	}
+}
+
+// Left Panel
+// *********************************
+
+.left-panel {
+	float:left;
+	width:260px;
+}
+
+// Left Panel Modules
+// *********************************
+
+.left-panel .mod {
+	padding:20px;
+	padding-left:0;
+	border-bottom:$border $dkgrey;
+	@extend .clearfix;
+
+	&:last-child {
+		border-bottom:none;
+	}
+}
+
+.mod-single {
+	@extend .clearfix;
+	position:relative;
+}
+
+.mod-footlink {
+	float:right;
+	font-size:12px;
+	margin:10px 0 0 0;
+	color:$grey;
+	text-decoration:underline;
+}
+
+.mod-single span {
+	display:block;
+}
+
+// Paging
+// *********************************
+
+.paging {
+	float:right;
+}
+
+.paging a {
+	font-weight:700;
+	&:hover {
+		background-color:$teal;
+	}
+	&.inactive {
+	background-color:#ddd;
+	}
+}

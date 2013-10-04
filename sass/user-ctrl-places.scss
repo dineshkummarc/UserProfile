@@ -1,0 +1,59 @@
+// User Control - Places
+// *********************************
+
+.user-ctrl-places.content {
+	border:0;
+	padding-left:0;
+	padding-right:0;
+	width:100%;
+
+	.places-col {
+		display:inline-block;
+		float:left;
+		width:30%;
+		margin-right:5%;
+		&:last-child {
+			margin-right:0;
+		}
+	}
+}
+
+// Places List
+// *********************************
+
+.place-single {
+	width:100%;
+	float:left;
+	border:1px $stroke $dkgrey;
+	height:82px;
+	margin-bottom:$margin / 2;
+	@include transition(all 0.3s ease);
+	cursor:pointer;
+
+	&:hover {
+		background-color:$ltgrey;
+		@include transition(all 0.3s ease);
+	}
+
+	img {
+		height:80px;
+		width:80px;
+		border:none;
+		float:left;
+		margin-right:10px;
+	}
+
+	.place-name {
+		@include font-size(1);
+		font-weight:bold;
+		color:$grey;
+		display:block;
+	}
+
+	p {
+		float:left;
+		@include font-size(0.625);
+		padding:5px;
+		color:$grey;
+	}
+}
